@@ -32,6 +32,17 @@ public class LogInTests {
         Assert.assertEquals(driver.getTitle(),"Web Orders");
 
     }
+
+    @Test
+    public void NagitivelogInTest1(){
+        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("tester2");
+
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test"+ Keys.ENTER);
+
+        Assert.assertEquals(driver.findElement(By.id("ctl00_MainContent_status")).getText(),"Invalid Login or Password.");
+
+    }
     @Test
     public void logOut(){
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
