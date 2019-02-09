@@ -17,7 +17,11 @@ import java.util.concurrent.TimeUnit;
 public class LogInTests {
     WebDriver driver;
 
-//    /
+//    / to Zabi
+//      to Zabi
+//      to Zabi
+//      to Zabi
+//
 //    /
 //    /
 //    /
@@ -30,6 +34,13 @@ public class LogInTests {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
+
+
+    @Test
+    public void testingZabi(){
+        System.out.println("test is compeleted ");
+    }
+
 
     @Test
     public void logInTest1(){
